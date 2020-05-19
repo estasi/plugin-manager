@@ -1,0 +1,36 @@
+{
+    "name"             : "estasi/plugin-manager",
+    "description"      : "Plugin Manager for dynamically connecting classes",
+    "keywords"         : [
+        "estasi",
+        "plugin manager",
+        "psr",
+        "psr-4",
+        "psr-12"
+    ],
+    "minimum-stability": "stable",
+    "license"          : "BSD-3-Clause",
+    "authors"          : [
+        {
+            "name" : "Mikhail Erypalov",
+            "email": "mikaxxl@yandex.ru",
+            "role" : "developer"
+        }
+    ],
+    "config"           : {
+        "sort-packages"      : true,
+        "optimize-autoloader": true
+    },
+    "require"          : {
+        "php"           : "^7.4",
+        "estasi/filter" : "^1",
+        "estasi/utility": "^1",
+        "php-ds/php-ds" : "dev-master",
+        "psr/container" : "dev-master"
+    },
+    "autoload"         : {
+        "psr-4": {
+            "Estasi\\PluginManager\\": "src/"
+        }
+    }
+}
