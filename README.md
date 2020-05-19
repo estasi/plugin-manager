@@ -109,4 +109,4 @@ $myFirstClass = $myPluginManager->build(MyFirstClass::class, ['foo' => 'bar', 'o
 ```
 
 ## License
-All contents of this package are licensed under the [BSD-3-Clause license]().
+All contents of this package are licensed under the [BSD-3-Clause license](https://github.com/estasi/plugin-manager/blob/master/LICENSE.md).
