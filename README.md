@@ -34,13 +34,11 @@ class MyPluginManager extends Abstracts\PluginManager {
 
     public function getInstanceOf(): ?string
     {
-        // TODO: Implement getInstanceOf() method.
         return 'MyBasicClass';
     }
 
     public function getPlugins(): Interfaces\PluginsList
     {
-        // TODO: Implement getPlugins() method.
         return new PluginsList(
             new Plugin(MyFirstClass::class, ['first', 'First', /*...  aliases of class*/]),
             new Plugin('MySecondClass', ['second', 'Second', /*... aliases of class */], new MyFactoryForSecondClass()),
