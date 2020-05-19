@@ -17,7 +17,7 @@ composer require estasi/plugin-manager
     <br><small><i>Polyfill is installed with the estasi/plugin-manager package.</i></small>
 - [Container interface](https://github.com/php-fig/container)
     `composer require psr/container`
-    <br><small><i>Polyfill is installed with the estasi/plugin-manager package.</i></small>
+    <br><small><i>Is installed with the estasi/plugin-manager package.</i></small>
     
 ## Usage
 ### Creating a plugin manager
