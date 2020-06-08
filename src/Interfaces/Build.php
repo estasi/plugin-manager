@@ -16,7 +16,7 @@ interface Build extends ContainerInterface
     /**
      * Creates and returns an object of the requested class with the passed parameters in the constructor
      *
-     * @param string                       $id
+     * @param string                       $name
      * @param iterable<string, mixed>|null $options
      *
      * @return object
@@ -24,5 +24,5 @@ interface Build extends ContainerInterface
      * @throws \Estasi\PluginManager\Exception\ContainerException
      * @api
      */
-    public function build(string $id, iterable $options = null): object;
+    public function build($name, iterable $options = null);
 }

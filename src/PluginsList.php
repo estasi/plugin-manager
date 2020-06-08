@@ -60,26 +60,26 @@ final class PluginsList implements Interfaces\PluginsList
     /**
      * @inheritDoc
      */
-    public function build(string $id, iterable $options = null): object
+    public function build($name, iterable $options = null)
     {
         /** @var Plugin|null $plugin */
         $plugin = null;
 
-        if ($this->storage->hasKey($id)) {
-            $plugin = $this->plugins->get($this->storage->get($id));
+        if ($this->storage->hasKey($name)) {
+            $plugin = $this->plugins->get($this->storage->get($name));
             goto _return_;
         }
 
         foreach ($this->plugins as $key => $plugin) {
-            if ($plugin->has($id)) {
-                $this->storage->put($id, $key);
+            if ($plugin->has($name)) {
+                $this->storage->put($name, $key);
                 goto _return_;
             }
         }
-        throw new NotFoundException($id, self::class);
+        throw new NotFoundException($name, self::class);
 
         _return_:
 
-        return $plugin->build($id, $options);
+        return $plugin->build($name, $options);
     }
 }

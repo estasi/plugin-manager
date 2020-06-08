@@ -59,16 +59,16 @@ final class Plugin implements Interfaces\Plugin
      * @inheritDoc
      * @throws \ReflectionException
      */
-    public function build(string $id, iterable $options = null): object
+    public function build($name, iterable $options = null)
     {
-        if (false === $this->has($id)) {
-            throw new NotFoundException($id, self::class);
+        if (false === $this->has($name)) {
+            throw new NotFoundException($name, self::class);
         }
 
         $class = $this->container->last();
         if (false === class_exists($class)) {
             throw new ContainerException(
-                sprintf('Plugin named "%s" cannot be created, because class "%s" not found!', $id, $class)
+                sprintf('Plugin named "%s" cannot be created, because class "%s" not found!', $name, $class)
             );
         }
 
